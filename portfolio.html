@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dhaval Rajput — Portfolio</title>
+  <meta name="description" content="Dhaval Rajput — Developer portfolio showcasing vibecoded apps and open-source projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html { scroll-behavior: smooth; }
+    section[id], header[id] { scroll-margin-top: 5rem; }
+    body {
+      background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(99, 102, 241, 0.15), transparent),
+                  radial-gradient(ellipse 60% 40% at 100% 0%, rgba(168, 85, 247, 0.08), transparent),
+                  #020617;
+    }
+    .glass {
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(148, 163, 184, 0.12);
+    }
+    .card-hover {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -12px rgba(99, 102, 241, 0.25);
+      border-color: rgba(129, 140, 248, 0.35);
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #a5b4fc 0%, #c4b5fd 50%, #f0abfc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #8b5cf6);
+      transition: opacity 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+    .tag {
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.25);
+    }
+  </style>
+</head>
+<body class="font-sans text-slate-300 antialiased min-h-screen">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 inset-x-0 z-50 glass">
+    <div class="max-w-5xl mx-auto px-5 h-14 flex items-center justify-between">
+      <a href="#top" class="font-display font-semibold text-white tracking-tight">Dhaval Rajput</a>
+      <div class="flex items-center gap-6 text-sm font-medium">
+        <a href="#projects" class="hover:text-white transition-colors">Projects</a>
+        <a href="#about" class="hover:text-white transition-colors">About</a>
+        <a href="#contact" class="hover:text-white transition-colors">Contact</a>
+        <a href="https://github.com/dhavalrajput2004" target="_blank" rel="noopener"
+           class="text-slate-400 hover:text-white transition-colors" aria-label="GitHub">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="top" class="pt-28 pb-16 px-5">
+    <div class="max-w-5xl mx-auto">
+      <p class="text-indigo-400 font-medium text-sm tracking-wide mb-3">Hey, I'm</p>
+      <h1 class="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
+        Dhaval Rajput
+      </h1>
+      <p class="mt-4 text-xl sm:text-2xl text-slate-400 max-w-xl leading-relaxed">
+        I build <span class="gradient-text font-semibold">vibecoded</span> apps &amp; ship them live.
+      </p>
+      <p class="mt-3 text-slate-500 max-w-lg">
+        Full-stack experiments, side projects, and open-source tools — deployed on Vercel &amp; living on GitHub.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#projects" class="btn-primary text-white font-medium px-5 py-2.5 rounded-lg text-sm">
+          View Projects
+        </a>
+        <a href="https://github.com/dhavalrajput2004" target="_blank" rel="noopener"
+           class="glass text-slate-300 hover:text-white font-medium px-5 py-2.5 rounded-lg text-sm border border-slate-700 hover:border-slate-500 transition-colors">
+          GitHub Profile →
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Projects -->
+  <section id="projects" class="py-16 px-5">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-2">Projects</h2>
+      <p class="text-slate-500 mb-10">Live demos on Vercel · Source on GitHub</p>
+
+      <div class="grid sm:grid-cols-2 gap-5">
+
+        <!-- Coloring Book -->
+        <article class="glass card-hover rounded-2xl p-6 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="font-display text-lg font-semibold text-white">Coloring Book</h3>
+            <span class="tag text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap">Live</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed flex-1">
+            Designed especially for toddlers, preschoolers, and young children, this delightful coloring game offers a joyful, calming, and educational space to paint, draw, and explore vibrant colors.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 mb-5">
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Flutter</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Kotlin</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">React</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://play.google.com/store/apps/details?id=com.aistudio.coloringbook.qvxjkw" target="_blank" rel="noopener"
+               class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Live on PlayStore
+            </a>
+            <a href="https://github.com/dhavalrajput2004/coloring-app" target="_blank" rel="noopener"
+               class="glass text-slate-300 hover:text-white text-sm font-medium px-4 py-2 rounded-lg border border-slate-700 hover:border-slate-500 transition-colors flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </article>
+
+<!-- ShuffloPop -->
+        <article class="glass card-hover rounded-2xl p-6 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="font-display text-lg font-semibold text-white">ShufflePop</h3>
+            <span class="tag text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap">Live</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed flex-1">
+            Match cards by color, number, or symbol and race to empty your hand. Change the flow with Skip and Reverse cards, make an opponent draw extra cards, or choose the next color with a Wild.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 mb-5">
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Flutter</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Java</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">React</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://play.google.com/store/apps/details?id=com.dhavalrajput.shufflepop" target="_blank" rel="noopener"
+               class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Live on PlayStore
+            </a>
+            <a href="https://github.com/dhavalrajput2004/shufflepop-android" target="_blank" rel="noopener"
+               class="glass text-slate-300 hover:text-white text-sm font-medium px-4 py-2 rounded-lg border border-slate-700 hover:border-slate-500 transition-colors flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </article>
+
+
+        <!-- Notes App -->
+        <article class="glass card-hover rounded-2xl p-6 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="font-display text-lg font-semibold text-white">Notes App</h3>
+            <span class="tag text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap">Live</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed flex-1">
+            Clean and fast notes app built with Vue 3 + Vite. Create, edit, and organize your notes with a modern UI.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 mb-5">
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Vue 3</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Vite</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://notes-app-fawn-eta.vercel.app" target="_blank" rel="noopener"
+               class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Live Demo
+            </a>
+            <a href="https://github.com/dhavalrajput2004/notes-app" target="_blank" rel="noopener"
+               class="glass text-slate-300 hover:text-white text-sm font-medium px-4 py-2 rounded-lg border border-slate-700 hover:border-slate-500 transition-colors flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </article>
+
+        <!-- Luxestone -->
+        <article class="glass card-hover rounded-2xl p-6 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="font-display text-lg font-semibold text-white">Luxestone</h3>
+            <span class="tag text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap">Live</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed flex-1">
+            Premium marble website landing page. Elegant design showcasing luxury stone products with smooth interactions.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 mb-5">
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">TypeScript</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Vite</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">React</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://venkateshmarble.vercel.app/" target="_blank" rel="noopener"
+               class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Live Demo
+            </a>
+            <a href="https://github.com/dhavalrajput2004/luxestone" target="_blank" rel="noopener"
+               class="glass text-slate-300 hover:text-white text-sm font-medium px-4 py-2 rounded-lg border border-slate-700 hover:border-slate-500 transition-colors flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </article>
+
+        <!-- QueueFlow -->
+        <article class="glass card-hover rounded-2xl p-6 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="font-display text-lg font-semibold text-white">QueueFlow</h3>
+            <span class="tag text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap">Mobile</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed flex-1">
+            Real-time patient queue management app. Find live queue status, book appointments, and manage tokens for smoother clinic visits.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 mb-5">
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Mobile</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Realtime</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Tokens</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://github.com/dhavalrajput2004/QueueFlow-mobile-app" target="_blank" rel="noopener"
+               class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </article>
+
+        <!-- Nifty Hubble -->
+        <article class="glass card-hover rounded-2xl p-6 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="font-display text-lg font-semibold text-white">Nifty Hubble</h3>
+            <span class="tag text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap">Live</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed flex-1">
+            Fun cricket game with interactive gameplay. Hit sixes, chase targets, and enjoy classic cricket action in the browser.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 mb-5">
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">JavaScript</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">HTML5</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Game</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://nifty-hubble-alpha.vercel.app" target="_blank" rel="noopener"
+               class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Live Demo
+            </a>
+            <a href="https://github.com/dhavalrajput2004/nifty-hubble" target="_blank" rel="noopener"
+               class="glass text-slate-300 hover:text-white text-sm font-medium px-4 py-2 rounded-lg border border-slate-700 hover:border-slate-500 transition-colors flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </article>
+
+        <!-- Aura-OS -->
+        <article class="glass card-hover rounded-2xl p-6 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="font-display text-lg font-semibold text-white">Aura-OS</h3>
+            <span class="tag text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap">AI</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed flex-1">
+            AI chat agent — conversational assistant with intelligent responses. Built for smooth, natural interactions.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 mb-5">
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">AI</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Chat</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://github.com/dhavalrajput2004/Aura-OS" target="_blank" rel="noopener"
+               class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </article>
+
+        <!-- Arcade Games -->
+        <article class="glass card-hover rounded-2xl p-6 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="font-display text-lg font-semibold text-white">Arcade Games</h3>
+            <span class="tag text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap">Live</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed flex-1">
+            Collection of classic arcade games in the browser. Retro vibes, simple controls, and endless fun.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 mb-5">
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">JavaScript</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">HTML/CSS</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Games</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://arcade-games-ivory.vercel.app" target="_blank" rel="noopener"
+               class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+              Live Demo
+            </a>
+            <a href="https://github.com/dhavalrajput2004/arcade-games" target="_blank" rel="noopener"
+               class="glass text-slate-300 hover:text-white text-sm font-medium px-4 py-2 rounded-lg border border-slate-700 hover:border-slate-500 transition-colors flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </article>
+
+        <!-- Snake Game -->
+        <article class="glass card-hover rounded-2xl p-6 flex flex-col">
+          <div class="flex items-start justify-between gap-3 mb-3">
+            <h3 class="font-display text-lg font-semibold text-white">Snake Game</h3>
+            <span class="tag text-xs font-medium px-2 py-0.5 rounded-full whitespace-nowrap">Game</span>
+          </div>
+          <p class="text-slate-400 text-sm leading-relaxed flex-1">
+            Classic Snake game recreated for the web. Smooth controls, score tracking, and that nostalgic feel.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-4 mb-5">
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">JavaScript</span>
+            <span class="text-xs text-slate-500 bg-slate-800/80 px-2 py-0.5 rounded">Canvas</span>
+          </div>
+          <div class="flex gap-3">
+            <a href="https://github.com/dhavalrajput2004/snake-game" target="_blank" rel="noopener"
+               class="btn-primary text-white text-sm font-medium px-4 py-2 rounded-lg flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              Code
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 px-5">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-6">About</h2>
+      <div class="glass rounded-2xl p-6 sm:p-8 max-w-2xl">
+        <p class="text-slate-300 leading-relaxed">
+          I love turning ideas into working products fast. Most of my projects start as experiments —
+          a little UI polish, some realtime magic or AI, then shipped to Vercel so anyone can try them.
+        </p>
+        <p class="text-slate-400 mt-4 leading-relaxed">
+          Stack I reach for: <strong class="text-slate-200">Vue / React / TypeScript</strong>, Vite, and whatever makes the idea click.
+          Always open to collabs and feedback.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 px-5 pb-24">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="font-display text-2xl sm:text-3xl font-bold text-white mb-3">Let's connect</h2>
+      <p class="text-slate-500 mb-8">Got an idea or just want to say hi?</p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="https://github.com/dhavalrajput2004" target="_blank" rel="noopener"
+           class="btn-primary text-white font-medium px-6 py-3 rounded-lg text-sm">
+          GitHub
+        </a>
+        <a href="mailto:dhavalrajput2004@gmail.com"
+           class="glass text-slate-300 hover:text-white font-medium px-6 py-3 rounded-lg text-sm border border-slate-700 hover:border-slate-500 transition-colors">
+          Email
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 py-6 px-5">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-2 text-sm text-slate-600">
+      <p>© 2026 Dhaval Rajput. Built with vibes.</p>
+      <p>Deployed on Vercel · Open source on GitHub</p>
+    </div>
+  </footer>
+
+</body>
+</html>
